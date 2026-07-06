@@ -1,0 +1,44 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+.m2/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.iml
+*.iws
+*.ipr
+
+# Compiled files
+*.class
+*.o
+*.so
+out/
+
+# Test coverage
+coverage/
+*.coverage
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+build/
+dist/
+
+# Dependencies (optional - uncomment if not versioning)
+# lib/
+# vendor/
