@@ -7,11 +7,11 @@
 
     <groupId>com.chargepoint</groupId>
     <artifactId>ChargePoint</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>ChargePoint Automation</name>
-    <description>Selenium WebDriver automation with comprehensive test suite</description>
+    <description>Selenium WebDriver automation with comprehensive test suite and configuration management</description>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -21,6 +21,7 @@
         <testng.version>7.8.1</testng.version>
         <mockito.version>5.5.1</mockito.version>
         <jacoco.version>0.8.10</jacoco.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
     </properties>
 
     <dependencies>
@@ -29,6 +30,13 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
+        </dependency>
+
+        <!-- SnakeYAML for YAML Configuration -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
         </dependency>
 
         <!-- TestNG Framework -->

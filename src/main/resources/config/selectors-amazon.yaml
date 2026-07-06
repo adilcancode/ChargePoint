@@ -1,0 +1,49 @@
+# Amazon Platform Configuration
+# XPath selectors and settings for Amazon e-commerce platform
+
+platform: amazon
+version: "1.0.0"
+description: "XPath selectors and configuration for Amazon platform"
+
+# Navigation and modal selectors
+navigation:
+  closeLoginPopup: "//button[@aria-label='Close']"
+  searchInput: "#twotabsearchtextbox"
+  searchButton: "#nav-search-submit-button"
+
+# Product list selectors
+productList:
+  searchResults: "//div[@data-component-type='s-search-result']"
+  productContainer: "//div[@class='s-result-item']"
+
+# Product detail selectors
+productDetails:
+  names: "//span[@class='a-size-medium a-color-base a-text-normal']"
+  originalPrice: "//span[@class='a-price-whole']"
+  currentPrice: "//span[@class='a-price-now']"
+  discount: "//span[@class='a-badge-label-inner']"
+  rating: "//span[@class='a-icon-star-small']"
+  reviews: "//span[@class='a-size-base']"
+
+# Modal and popup selectors
+modals:
+  cookieBanner: "//div[@data-feature-name='sp-cc']"
+  notificationBanner: "//div[@class='nav-alert']"
+
+# Wait times and retry policies (in seconds)
+waitTimes:
+  implicitWait: 10
+  pageLoadWait: 20
+  elementWait: 5
+
+retryPolicies:
+  maxRetries: 3
+  retryDelayMs: 1500
+  backoffMultiplier: 2.0
+
+# Feature flags
+features:
+  enableHeadlessMode: false
+  enableScreenshots: true
+  enableLogging: true
+  capturePerformanceMetrics: false
