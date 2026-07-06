@@ -1,0 +1,50 @@
+# Flipkart Platform Configuration
+# XPath selectors and settings for Flipkart e-commerce platform
+
+platform: flipkart
+version: "1.0.0"
+description: "XPath selectors and configuration for Flipkart platform"
+
+# Navigation and modal selectors
+navigation:
+  closeLoginPopup: "//div[@class='_2QfC02']/button"
+  searchInput: "//input[@name='q']"
+  searchButton: "//button[contains(@class, 'search-button')]"
+
+# Product list selectors
+productList:
+  searchResults: "//ul[contains(@class,'col-12-12')]//li/div/a/div[2]"
+  productContainer: "//div[@class='_32g5_j']/following-sibling::a[1]"
+
+# Product detail selectors
+productDetails:
+  names: "//div[@class='_32g5_j']/preceding-sibling::a[1]"
+  originalPrice: "//div[@class='_32g5_j']/following-sibling::a[1]/div[1]/div[1]"
+  currentPrice: "//div[@class='_32g5_j']/following-sibling::a[1]/div/div[2]"
+  discount: "//div[@class='_32g5_j']/following-sibling::a[1]/div/div[3]"
+  rating: "//div[@class='_32g5_j']/following-sibling::a[1]/div/div[4]"
+  reviews: "//div[@class='_32g5_j']/following-sibling::a[1]/div/div[5]"
+
+# Modal and popup selectors
+modals:
+  loginModal: "//div[@class='modal-login']"
+  notificationBanner: "//div[@class='notification-banner']"
+  cookieBanner: "//div[@class='cookie-consent']"
+
+# Wait times and retry policies (in seconds)
+waitTimes:
+  implicitWait: 10
+  pageLoadWait: 15
+  elementWait: 5
+
+retryPolicies:
+  maxRetries: 3
+  retryDelayMs: 1000
+  backoffMultiplier: 1.5
+
+# Feature flags
+features:
+  enableHeadlessMode: false
+  enableScreenshots: true
+  enableLogging: true
+  capturePerformanceMetrics: false
