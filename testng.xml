@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-current.dtd">
+<suite name="ChargePoint Test Suite" parallel="methods" thread-count="3">
+    <test name="Configuration Tests">
+        <classes>
+            <class name="com.chargepoint.config.ConfigurationTest"/>
+        </classes>
+    </test>
+
+    <test name="Utility Tests">
+        <classes>
+            <class name="com.chargepoint.utils.XPathSelectorsTest"/>
+        </classes>
+    </test>
+
+    <test name="Model Tests">
+        <classes>
+            <class name="com.chargepoint.model.ProductTest"/>
+        </classes>
+    </test>
+
+    <test name="Driver Tests">
+        <classes>
+            <class name="com.chargepoint.driver.DriverManagerTest"/>
+        </classes>
+    </test>
+
+    <test name="Extraction Tests">
+        <classes>
+            <class name="com.chargepoint.extractor.ProductDataExtractorTest"/>
+        </classes>
+    </test>
+
+    <test name="Export Tests">
+        <classes>
+            <class name="com.chargepoint.exporter.DataExporterTest"/>
+        </classes>
+    </test>
+</suite>
